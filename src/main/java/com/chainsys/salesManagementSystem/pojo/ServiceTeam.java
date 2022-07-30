@@ -1,4 +1,4 @@
-package com.chainsys.salesManagementSystem.pojo;
+package com.chainsys.salesmanagementsystem.pojo;
 
 import java.io.File;
 
@@ -8,7 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="")
+@Table(name="service_team")
 public class ServiceTeam {
 	@Id
 	private int servicer_id;

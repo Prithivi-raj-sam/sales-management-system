@@ -1,9 +1,13 @@
-package com.chainsys.salesManagementSystem.pojo;
+package com.chainsys.salesmanagementsystem.pojo;
 
+import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
+@Entity
+@Table(name="territories")
+public class Territory {
 
-public class Territory 
-{	@Id
+	@Id
 	private int territory_id;
 	private String territory_name;
 	private int no_of_customers;

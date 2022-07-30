@@ -1,14 +1,14 @@
-package com.chainsys.salesManagementSystem.Repository;
+package com.chainsys.salesmanagementsystem.Repository;
 
 import java.util.List;
 
 import org.springframework.data.repository.CrudRepository;
 
-import com.chainsys.salesManagementSystem.pojo.SalesTeam;
+import com.chainsys.salesmanagementsystem.pojo.SalesTeam;
 
 public interface SalesTeamRepository extends CrudRepository<SalesTeam,Integer>{
 	SalesTeam save(SalesTeam seller);
-	SalesTeam findById(int sellerId);
-	void deleteById(int sellerId);
+	SalesTeam findById(int seller_id);
+	void deleteById(int seller_id);
 	List<SalesTeam> findAll();
 }

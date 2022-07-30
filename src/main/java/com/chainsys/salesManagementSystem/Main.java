@@ -1,4 +1,4 @@
-package com.chainsys.salesManagementSystem;
+package com.chainsys.salesmanagementsystem;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 

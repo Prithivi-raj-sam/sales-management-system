@@ -1,10 +1,10 @@
-package com.chainsys.salesManagementSystem.Repository;
+package com.chainsys.salesmanagementsystem.Repository;
 
 import java.util.List;
 
 import org.springframework.data.repository.CrudRepository;
 
-import com.chainsys.salesManagementSystem.pojo.Lead;
+import com.chainsys.salesmanagementsystem.pojo.Lead;
 
 public interface LeadsRepository extends CrudRepository<Lead,Integer>{
 	Lead save(Lead lead);

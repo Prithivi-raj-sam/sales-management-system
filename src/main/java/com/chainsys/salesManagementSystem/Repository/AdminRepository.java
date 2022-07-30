@@ -1,10 +1,10 @@
-package com.chainsys.salesManagementSystem.Repository;
+package com.chainsys.salesmanagementsystem.Repository;
 
 import java.util.List;
 
 import org.springframework.data.repository.CrudRepository;
 
-import com.chainsys.salesManagementSystem.pojo.Admin;
+import com.chainsys.salesmanagementsystem.pojo.Admin;
 
 public interface AdminRepository extends CrudRepository<Admin,Integer>{
 	Admin save(Admin admin);

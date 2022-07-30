@@ -1,10 +1,10 @@
-package com.chainsys.salesManagementSystem.Repository;
+package com.chainsys.salesmanagementsystem.Repository;
 
 import java.util.List;
 
 import org.springframework.data.repository.CrudRepository;
 
-import com.chainsys.salesManagementSystem.pojo.Profit;
+import com.chainsys.salesmanagementsystem.pojo.Profit;
 
 public interface ProfitRepository extends CrudRepository<Profit,Integer>{
 	Profit save(Profit profit);

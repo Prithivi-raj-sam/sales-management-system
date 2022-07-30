@@ -1,10 +1,10 @@
-package com.chainsys.salesManagementSystem.Repository;
+package com.chainsys.salesmanagementsystem.Repository;
 
 import java.util.List;
 
 import org.springframework.data.repository.CrudRepository;
 
-import com.chainsys.salesManagementSystem.pojo.Expenditure;
+import com.chainsys.salesmanagementsystem.pojo.Expenditure;
 
 public interface ExpenditureRepository extends CrudRepository<Expenditure,Integer>{
 	Expenditure save(Expenditure expenditure);

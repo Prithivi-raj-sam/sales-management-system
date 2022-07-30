@@ -1,10 +1,10 @@
-package com.chainsys.salesManagementSystem.Repository;
+package com.chainsys.salesmanagementsystem.Repository;
 
 import java.util.List;
 
 import org.springframework.data.repository.CrudRepository;
 
-import com.chainsys.salesManagementSystem.pojo.Account;
+import com.chainsys.salesmanagementsystem.pojo.Account;
 
 public interface AccountRepository extends CrudRepository<Account,Integer>{
 	Account save(Account account);

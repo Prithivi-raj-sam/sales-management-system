@@ -1,12 +1,17 @@
-package com.chainsys.salesManagementSystem.pojo;
+package com.chainsys.salesmanagementsystem.pojo;
 
 import java.util.Date;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.Id;
-
-public class Service 
-{	@Id
-	private int case_no;
+import javax.persistence.Table;
+@Entity
+@Table(name="services")
+public class Services  {	
+	@Id
+	@Column(name="case_no")
+	private int service_id;
 	private int ser_id;
 	private Date sevice_date;
 	private int account_id;
@@ -15,11 +20,11 @@ public class Service
 	private String proirity;
 	private String channel;
 	
-	public int getCase_no() {
-		return case_no;
+	public int getService_id() {
+		return service_id;
 	}
-	public void setCase_no(int case_no) {
-		this.case_no = case_no;
+	public void setService_id(int service_id) {
+		this.service_id = service_id;
 	}
 	public int getSer_id() {
 		return ser_id;

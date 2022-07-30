@@ -4,9 +4,9 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>all sales Man</title>
+<title>success</title>
 </head>
 <body>
- <h1>sales man</h1>
+<h1>Success</h1>
 </body>
 </html>

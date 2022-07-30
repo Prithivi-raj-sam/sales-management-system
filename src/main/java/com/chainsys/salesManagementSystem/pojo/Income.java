@@ -1,4 +1,4 @@
-package com.chainsys.salesManagementSystem.pojo;
+package com.chainsys.salesmanagementsystem.pojo;
 
 import java.util.Date;
 import javax.persistence.Entity;

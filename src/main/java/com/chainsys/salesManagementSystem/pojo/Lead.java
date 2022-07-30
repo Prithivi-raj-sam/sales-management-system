@@ -1,7 +1,10 @@
-package com.chainsys.salesManagementSystem.pojo;
+package com.chainsys.salesmanagementsystem.pojo;
 
+import javax.persistence.Entity;
 import javax.persistence.Id;
-
+import javax.persistence.Table;
+@Entity
+@Table(name="leads")
 public class Lead 
 {	@Id
 	private int leed_id;
