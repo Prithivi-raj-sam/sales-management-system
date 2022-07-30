@@ -1,11 +1,13 @@
 package com.chainsys.salesManagementSystem.pojo;
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
 @Table(name="accounts")
 public class Account {
+	@Id
 	private int account_id; 
 	private String account_name;
 	private String company;

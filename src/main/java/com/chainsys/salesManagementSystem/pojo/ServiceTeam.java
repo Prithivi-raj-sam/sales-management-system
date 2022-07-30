@@ -4,11 +4,13 @@ import java.io.File;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
 @Table(name="")
 public class ServiceTeam {
+	@Id
 	private int servicer_id;
 	private String ser_name;
 	private long ser_contact; 

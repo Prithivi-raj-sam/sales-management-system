@@ -2,8 +2,10 @@ package com.chainsys.salesManagementSystem.pojo;
 
 import java.util.Date;
 
+import javax.persistence.Id;
+
 public class Service 
-{
+{	@Id
 	private int case_no;
 	private int ser_id;
 	private Date sevice_date;

@@ -2,7 +2,10 @@ package com.chainsys.salesManagementSystem.pojo;
 
 import java.io.File;
 
+import javax.persistence.Id;
+
 public class SalesTeam {
+	@Id
 	private int seller_id;
 	private String sel_name;
 	private long sel_contact; 

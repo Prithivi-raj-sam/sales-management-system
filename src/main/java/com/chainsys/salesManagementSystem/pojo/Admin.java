@@ -1,11 +1,13 @@
 package com.chainsys.salesManagementSystem.pojo;
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
 @Table(name="/admins")
 public class Admin {
+	@Id
 	private int admin_id; 
 	private String admin_name;
 	private String admin_password; 

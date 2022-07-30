@@ -2,7 +2,10 @@ package com.chainsys.salesManagementSystem.pojo;
 
 import java.util.Date;
 
+import javax.persistence.Id;
+
 public class ServiceTarget {
+
 	private Date service_date;
 	private int servicer_id;
 	private int planned_service;

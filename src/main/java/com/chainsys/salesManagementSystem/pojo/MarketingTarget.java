@@ -2,6 +2,8 @@ package com.chainsys.salesManagementSystem.pojo;
 
 import java.util.Date;
 
+import javax.persistence.Id;
+
 public class MarketingTarget {
 	private Date marketing_date;
 	private int marketer_id;

@@ -2,8 +2,10 @@ package com.chainsys.salesManagementSystem.pojo;
 
 import java.util.Date;
 
+import javax.persistence.Id;
+
 public class Sale
-{
+{	@Id
 	private int sale_id;
 	private int account_id;
 	private int seller_id;

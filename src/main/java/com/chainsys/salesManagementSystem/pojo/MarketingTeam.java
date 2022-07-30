@@ -3,11 +3,13 @@ package com.chainsys.salesManagementSystem.pojo;
 import java.io.File;
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
 @Table(name="marketing_team")
 public class MarketingTeam {
+	@Id
 	private int servicer_id; 
 	private String ser_name; 
 	private long ser_contact; 

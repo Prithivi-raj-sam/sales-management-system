@@ -1,7 +1,9 @@
 package com.chainsys.salesManagementSystem.pojo;
 
+import javax.persistence.Id;
+
 public class Lead 
-{
+{	@Id
 	private int leed_id;
 	private int account_id;
 	private int marketer_id;
