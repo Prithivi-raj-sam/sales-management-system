@@ -29,7 +29,7 @@ public class SalesController {
 	@PostMapping("/addsales")
 	public String addSales(@ModelAttribute("addsale")Sale sale,Model model) {
 		saleserv.insertSales(sale);
-		return "add-sales-from";
+		return "add-sales-form";
 	}
 	@GetMapping("/deletesales")
 	public String deleteSales(@RequestParam("id")int id,Model model) {
@@ -46,7 +46,7 @@ public class SalesController {
 	public String allSales(Model model) {
 		List<Sale>allsale=saleserv.getAllSales();
 		model.addAttribute("allsale", allsale);
-		return "all-sale";
+		return "all-sales";
 	}
 	@GetMapping("/updatesalesform")
 	public String updateSalesFrom(@RequestParam("id")int id,Model model) {
@@ -57,6 +57,6 @@ public class SalesController {
 	@PostMapping("/updatesales")
 	public String updateSales(@ModelAttribute("updatesale")Sale sale,Model model) {
 		saleserv.insertSales(sale);
-		return "update-sales-from";
+		return "update-sales-form";
 	}
 }

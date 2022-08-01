@@ -29,7 +29,7 @@ public class LeadsController {
 	@PostMapping("/addlead")
 	public String addLead(@ModelAttribute("addlead") Lead lead,Model model) {
 		leadserv.insertLeads(lead);
-		return "add-lead-from";
+		return "add-lead-form";
 	}
 	@GetMapping("/getlead")
 	public String getLeadById(@RequestParam("id")int id,Model model) {
@@ -40,13 +40,13 @@ public class LeadsController {
 	@GetMapping("/deletelead")
 	public String deleteLeadById(@RequestParam("id")int id,Model model) {
 		leadserv.deleteLeadById(id);
-		return "all-lead";
+		return "redirect:/lead/alllead";
 	}
 	@GetMapping("/alllead")
 	public String allLeads(Model model) {
 		List<Lead>allLead =leadserv.getAllLeads();
 		model.addAttribute("alllead", allLead);
-		return "redirect:/lead/alllead";
+		return "all-leads";
 	}
 	@GetMapping("/updateleadform")
 	public String updateLeadForm(@RequestParam("id")int id,Model model) {

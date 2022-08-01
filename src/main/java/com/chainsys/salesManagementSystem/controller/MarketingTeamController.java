@@ -24,12 +24,12 @@ public class MarketingTeamController {
 	public String addMarketingManForm(Model model) {
 		MarketingTeam markMan= new MarketingTeam();
 		model.addAttribute("addmarkman", markMan);
-		return "add-markman-form";
+		return "add-marketman-form";
 	}
 	@PostMapping("/addmark")
 	public String addMarketingMan(@ModelAttribute("addmarkman")MarketingTeam markman,Model model) {
 		markserv.insertMarketingMan(markman);
-		return "add-markman";
+		return "add-marketman-form";
 	}
 	@GetMapping("/deletemarketman")
 	public String deleteMarketTeam(@RequestParam("id")int id,Model model) {
@@ -40,24 +40,24 @@ public class MarketingTeamController {
 	public String getMarketManById(@RequestParam("id")int id, Model model) {
 		MarketingTeam markteam=markserv.getMarketManById(id);
 		model.addAttribute("markteam", markteam);
-		return "get-markteam-id";
+		return "get-marketman-id";
 	}
 	@GetMapping("/allmark")
 	public String getAllMarketingMan(Model model) {
 		List<MarketingTeam> allmark=markserv.getAllMarketMan();
 		model.addAttribute("allmark", allmark);
-		return "all-markteam";
+		return "all-marketman";
 	}
 	@GetMapping("/updatemarkform")
 	public String updateMarketingManForm(@RequestParam("id")int id,Model model) {
 		MarketingTeam markMan= markserv.getMarketManById(id);
 		model.addAttribute("updatemarkman", markMan);
-		return "update-markman-form";
+		return "update-marketman-form";
 	}
 	@PostMapping("/updatemark")
 	public String updateMarketingMan(@ModelAttribute("updatemarkman")MarketingTeam markman,Model model) {
 		markserv.updateMarketMan(markman);
-		return "add-markman";
+		return "update-marketman-form";
 	}
 	
 }

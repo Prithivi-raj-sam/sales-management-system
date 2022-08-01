@@ -42,7 +42,7 @@ public class ProfitController {
 		model.addAttribute("allprofit", allprofit);
 		return "all-profit";
 	}
-	@PostMapping("/getprofit")
+	@GetMapping("/getprofit")
 	public String getProfitById(@RequestParam("id")int id, Model model) {
 		Profit profit=profitserv.getProfitById(id);
 		model.addAttribute("profit", profit);

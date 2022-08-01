@@ -5,16 +5,16 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Update Lead</title>
+<title>Add Opportunity</title>
 </head>
 <body style="background-color:#3d403d; color:white;">
 	<div id="root">
 		<div id="form">
-			<form:form action="updatelead" method="post" modelAttribute="updatelead">
+			<form:form action="addopp" method="post" modelAttribute="addopp">
 				<div>
-					<label for="leed_id">Lead id</label>
+					<label for="opp_id">Opportunity id</label>
 					<div>
-						<form:input path="leed_id" />
+						<form:input path="opp_id" />
 					</div>
 				</div>
 				<div>
@@ -30,29 +30,37 @@
 					</div>
 				</div>
 				<div>
-					<label for="channel">Channel</label>
+					<label for="stages">Stages</label>
 					<div>
-						<form:input path="channel" />
+						<form:input path="stages" />
 					</div>
 				</div>
 				<div>
-					<label for="status">Status</label>
+					<label for="amount">Amount</label>
 					<div>
-						<form:input path="status" />
+						<form:input path="amount" />
 					</div>
 				</div>
 				<div>
-					<form:button id="button">update</form:button>
+					<label for="fiscal_period">Fiscal Period</label>
+					<div>
+						<form:input path="fiscal_period" />
+					</div>
+				</div>
+				<div>
+					<label for="propability">Probability</label>
+					<div>
+						<form:input path="propability" />
+					</div>
+				</div>
+				<div>
+					<form:button id="button">Add New</form:button>
 				</div>
 			</form:form>
 		</div>
 	</div>
-	<div id="div1"></div>
+	<div>${result}</div>
 	
-	<script>
-	document.getElementById("button").onclick=function(){
-		document.getElementById("div1").innerHTML="1 Lead updated";
-	}
-	</script>
+	
 </body>
 </html>

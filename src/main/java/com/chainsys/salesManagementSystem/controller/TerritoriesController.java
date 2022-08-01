@@ -26,7 +26,7 @@ public class TerritoriesController {
 		model.addAttribute("addter", ter);
 		return "add-territory-form";
 	}
-	@PostMapping()
+	@PostMapping("/addterritory")
 	public String addTerritory(@ModelAttribute("addter")Territory ter,Model model) {
 		terserv.insertTerritory(ter);
 		return "add-territory-form";
@@ -46,7 +46,7 @@ public class TerritoriesController {
 	public String allTerritory(Model model) {
 		List<Territory>allterritory =terserv.getAllTeritories();
 		model.addAttribute("allter", allterritory);
-		return "all-territory";
+		return "all-territories";
 	}
 	@GetMapping("/updateterritoryform")
 	public String updateTerritoryForm(@RequestParam("id")int id,Model model) {

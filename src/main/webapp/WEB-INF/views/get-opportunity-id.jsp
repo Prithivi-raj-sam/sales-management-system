@@ -5,16 +5,16 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>get Lead By Id</title>
+<title>Get Opportunity By Id</title>
 </head>
 <body style="background-color:#3d403d; color:white;">
 	<div id="root">
 		<div id="form">
-			<form:form action="" method="post" modelAttribute="lead">
+			<form:form action="" method="post" modelAttribute="opp">
 				<div>
-					<label for="leed_id">Lead id</label>
+					<label for="opp_id">Opportunity id</label>
 					<div>
-						<form:input path="leed_id" readonly="true"/>
+						<form:input path="opp_id" readonly="true"/>
 					</div>
 				</div>
 				<div>
@@ -24,24 +24,35 @@
 					</div>
 				</div>
 				<div>
-					<label for="marketer_id">Mareter Id</label>
+					<label for="marketer_id">Marketer Id</label>
 					<div>
 						<form:input path="marketer_id" readonly="true"/>
 					</div>
 				</div>
 				<div>
-					<label for="channel">Channel</label>
+					<label for="stages">Stages</label>
 					<div>
-						<form:input path="channel" readonly="true"/>
+						<form:input path="stages" readonly="true"/>
 					</div>
 				</div>
 				<div>
-					<label for="status">Status</label>
+					<label for="amount">Amount</label>
 					<div>
-						<form:input path="status" readonly="true"/>
+						<form:input path="amount" readonly="true"/>
 					</div>
 				</div>
-				
+				<div>
+					<label for="fiscal_period">Fiscal Period</label>
+					<div>
+						<form:input path="fiscal_period" readonly="true"/>
+					</div>
+				</div>
+				<div>
+					<label for="propability">Probability</label>
+					<div>
+						<form:input path="propability" readonly="true"/>
+					</div>
+				</div>
 			</form:form>
 		</div>
 	</div>

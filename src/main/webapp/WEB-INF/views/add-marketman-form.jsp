@@ -5,40 +5,46 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Add Lead Form</title>
+<title>Add Marketing Man</title>
 </head>
 <body style="background-color:#3d403d; color:white;">
 	<div id="root">
 		<div id="form">
-			<form:form action="addlead" method="post" modelAttribute="addlead">
+			<form:form action="addmark" method="post" modelAttribute="addmarkman">
 				<div>
-					<label for="leed_id">Lead id</label>
-					<div>
-						<form:input path="leed_id" />
-					</div>
-				</div>
-				<div>
-					<label for="account_id">Account Id</label>
-					<div>
-						<form:input path="account_id" />
-					</div>
-				</div>
-				<div>
-					<label for="marketer_id">Marketer Id</label>
+					<label for="marketer_id">marketer id</label>
 					<div>
 						<form:input path="marketer_id" />
 					</div>
 				</div>
 				<div>
-					<label for="channel">Channel</label>
+					<label for=m_name>Name</label>
 					<div>
-						<form:input path="channel" />
+						<form:input path="m_name" />
 					</div>
 				</div>
 				<div>
-					<label for="status">StatusS</label>
+					<label for="m_contact">Contact</label>
 					<div>
-						<form:input path="status" />
+						<form:input path="m_contact" />
+					</div>
+				</div>
+				<div>
+					<label for="m_email">Email</label>
+					<div>
+						<form:input path="m_email" />
+					</div>
+				</div>
+				<div>
+					<label for="m_address">Address</label>
+					<div>
+						<form:input path="m_address" />
+					</div>
+				</div>
+				<div>
+					<label for="m_profile">Profile</label>
+					<div>
+						<form:input path="m_profile" type="file" accept=".png"/>
 					</div>
 				</div>
 				<div>
@@ -51,7 +57,7 @@
 	
 	<script>
 	document.getElementById("button").onclick=function(){
-		document.getElementById("div1").innerHTML="1 Lead added";
+		document.getElementById("div1").innerHTML="1 Marketing Man added";
 	}
 	</script>
 </body>

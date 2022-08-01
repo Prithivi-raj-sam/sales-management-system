@@ -24,12 +24,12 @@ public class ServiceTeamController {
 	public String addServiceManForm(Model model) {
 		ServiceTeam servman=new ServiceTeam();
 		model.addAttribute("addservman", servman);
-		return "add-servman-form";
+		return "add-serviceman-form";
 	}
 	@PostMapping("/addservman")
 	public String addServiceMan(@ModelAttribute("addservman")ServiceTeam servman,Model model) {
 		servteamserv.insertServiceman(servman);
-		return "add-servman-form";
+		return "add-serviceman-form";
 	}
 	@GetMapping("/getservman")
 	public String getServiceMan(@RequestParam("id")int id, Model model) {
@@ -46,18 +46,18 @@ public class ServiceTeamController {
 	public String allServiceMan(Model model) {
 		List<ServiceTeam> allservman=servteamserv.getAllService();
 		model.addAttribute("allservman", allservman);
-		return "all-servman";
+		return "all-serviceman";
 	}
 	@GetMapping("/updateservmanform")
 	public String updateServiceManForm(@RequestParam("id")int id,Model model) {
 		ServiceTeam servman=servteamserv.getServiceManById(id);
 		model.addAttribute("updateservman", servman);
-		return "update-servman-form";
+		return "update-serviceman-form";
 	}
 	@PostMapping("/updateservman")
 	public String updateServiceMan(@ModelAttribute("updateservman")ServiceTeam servman,Model model) {
 		servteamserv.updateServiceMan(servman);
-		return "update-servman-form";
+		return "update-serviceman-form";
 	}
 	
 }

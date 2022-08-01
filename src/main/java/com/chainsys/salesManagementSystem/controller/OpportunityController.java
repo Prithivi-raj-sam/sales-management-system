@@ -29,6 +29,7 @@ public class OpportunityController {
 	@PostMapping("/addopp")
 	public String addOppertunity(@ModelAttribute("addopp")Opportunity opp,Model model) {
 		oppserv.insertOpportunity(opp);
+		model.addAttribute("result", "1 Opportunity added");
 		return "add-opp-form";
 	}
 	@GetMapping("/all-opp")
@@ -46,7 +47,7 @@ public class OpportunityController {
 	public String getOpportunityById(@RequestParam("id")int id,Model model) {
 		Opportunity opp=oppserv.findOpportunityById(id);
 		model.addAttribute("opp", opp);
-		return "get-opp-id";
+		return "get-opportunity-id";
 	}
 	@GetMapping("/updateoppform")
 	public String updateOpportunityForm(@RequestParam("id")int id,Model model) {
@@ -57,6 +58,8 @@ public class OpportunityController {
 	@PostMapping("/updateopp")
 	public String updateOppertunity(@ModelAttribute("updateopp")Opportunity opp,Model model) {
 		oppserv.insertOpportunity(opp);
+		String update="1 Opportunity updated";
+		model.addAttribute("opp", update);
 		return "update-opp-form";
 	}
 }
