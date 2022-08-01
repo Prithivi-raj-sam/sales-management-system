@@ -15,7 +15,7 @@ import com.chainsys.salesmanagementsystem.pojo.Admin;
 import com.chainsys.salesmanagementsystem.service.AdminService;
 
 @Controller
-@RequestMapping("/admin")
+@RequestMapping("/admins")
 public class AdminController {
 	@Autowired
 	private AdminService adminserv; 
@@ -40,7 +40,7 @@ public class AdminController {
 	@GetMapping("/deleteadmin")
 	public String deleteAdmin(@RequestParam("id")int id,Model model) {
 		adminserv.deleteAdmin(id);
-		return "redirect:/admin/adminlist";
+		return "redirect:/admins/adminlist";
 	}
 	@GetMapping("/getadmin")
 	public String getAdminById(@RequestParam("id")int id,Model model) {
@@ -48,13 +48,13 @@ public class AdminController {
 		model.addAttribute("admin", admin);
 		return "get-admin-id";
 	}
-	@GetMapping("/addadminform")
+	@GetMapping("/updateadminform")
 	public String updateAdminForm(@RequestParam("id")int id ,Model model) {
 		Admin admin=adminserv.findById(id);
 		model.addAttribute("updateadmin", admin);
 		return "update-admin-form";
 	}
-	@PostMapping("/addadmin")
+	@PostMapping("/updateadmin")
 	public String updateAdmin(@ModelAttribute("updateadmin") Admin admin,Model model) {
 		adminserv.updateAdmin(admin);
 		return "update-admin-form";

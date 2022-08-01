@@ -34,7 +34,7 @@ public class IncomeController {
 	}
 	@PostMapping("/addincome")
 	public String addIncome(@ModelAttribute("addincome") Income income,Model model) {
-		incomeRepo.insertIncome(null);
+		incomeRepo.insertIncome(income);
 		return "add-income-form";
 	}
 	@GetMapping("/deleteincome")

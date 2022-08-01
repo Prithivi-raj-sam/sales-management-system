@@ -27,7 +27,7 @@ public class AccountController {
 		model.addAttribute("addaccount", account);
 		return "add-account-form";
 	}
-	@PostMapping()
+	@PostMapping("/addaccount")
 	public String addAccount(@ModelAttribute("addaccount") Account account, Model model){
 		accountserv.insertAccount(account);
 		return "add-account-form";
@@ -41,13 +41,13 @@ public class AccountController {
 	@GetMapping("/deleteaccount")
 	public String deleteAccountById(@RequestParam("id") int id,Model model) {
 		accountserv.deleteAccountById(id);
-		return "redirect:/account/all-account";
+		return "redirect:/account/allaccount";
 	}
-	@GetMapping("/all-account")
+	@GetMapping("/allaccount")
 	public String getAllAccount(Model model){
 		List<Account> allAccount=accountserv.getAllAccount();
 		model.addAttribute("allaccount", allAccount);
-		return "get-all-account";
+		return "all-account";
 	}
 	@GetMapping("/updateform")
 	public String updateAccountForm(@RequestParam("id")int id,Model model) {
